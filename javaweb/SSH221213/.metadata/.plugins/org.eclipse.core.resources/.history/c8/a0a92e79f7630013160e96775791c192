@@ -1,0 +1,62 @@
+package com.demo.hibernate;
+
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
+
+public  class CartServiceImpl implements CartService {
+	//ItemDAO itemDAO = new ItemDAO();
+	  Item it = new Item();
+	  public Item getItem(String  sid){
+	    	try{
+	    		ItemDAO itemDAO = new ItemDAO();
+	    		Item item =null;
+	    		int id = Integer.parseInt(sid);
+	    	    itemDAO.findById(id);
+	    	    return item;
+	     }catch(Exception e){
+	    	 e.printStackTrace();
+	   	 return it;
+	     }
+	     
+	  }  
+	  
+	  @SuppressWarnings("unchecked")
+	public List<Item> getAll(){
+		  ApplicationContext ctx = new FileSystemXmlApplicationContext("file:F:\\SSH221213\\SSHWeb\\src\\applicationContext.xml");
+			//	Configuration cig = new Configuration().
+		  ItemDAO itemDao = (ItemDAO)ctx.getBean("ItemDAO");
+		  List<Item> list = itemDao.findAll();
+		  list.get(0).printItemInfo();
+		  return list;
+	  }
+	  
+	  public void deleteCartItem(String sid, Cart cart){
+		 int num = Integer.parseInt(sid);
+		  cart.deleteCartItem(num);
+		  
+	  }
+	  
+	  
+	  public void clearCart(Cart cart){
+		  cart.clearCartItem();
+	  }
+	  
+	  
+	  public void changeQuantity(String sid, String quantity, Cart cart){
+		  int num = Integer.parseInt(sid);
+		  int q = Integer.parseInt(quantity);
+		  cart.changeQuantity(num, q);
+	  }
+	  
+		public static void main(String[] args){
+			CartService itemService = new CartServiceImpl();
+		    
+			 //   List<Item> itemlist = new ArrayList<Item>();
+				List<Item> itemlist = itemService.getAll();
+		}
+	  
+	     
+}

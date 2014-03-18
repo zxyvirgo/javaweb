@@ -1,0 +1,43 @@
+package com.zxy.servlet;
+
+import com.demo.hibernate.*;
+
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.io.*;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+
+import com.zxy.servlet.*;
+
+@SuppressWarnings("unused")
+public class ServletDemo extends HttpServlet{
+	private static final long serialVersionUID = 1767877373569828531L;
+
+	@Override
+	public void doGet(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		doPost(req, resp);
+	}
+	
+	@Override
+	public void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		CartService itemService = new CartServiceImpl();
+	    
+	    List<Item> itemlist = new ArrayList<Item>();
+	   /* itemlist.add(itemService.getItem("1"));
+	    itemlist.add(itemService.getItem("2"));
+	    itemlist.add(itemService.getItem("3"));*/
+	    
+		req.setAttribute("itemlist", itemlist);
+		getServletContext().getRequestDispatcher("/ShopList.jsp").forward(req, resp);
+
+	}
+	
+
+}

@@ -1,0 +1,49 @@
+package com.demo.ibatis.service;
+
+public class Food extends Item
+{
+	private String bestBefore;
+	private String origin;
+/*	public Food(int id, String name, double price, String description,String bestBefore,String origin)
+	{
+	//	super(id,name,price,description);
+		this.bestBefore = bestBefore;
+		this.origin = origin;
+		
+	}
+	*/
+	public void setbestBefore(String bestBefore)
+	{
+		this.bestBefore = bestBefore;
+	}
+	
+	public String getbestBefore()
+	{
+		return bestBefore;
+	}
+	
+	public void setorigin(String origin)
+	{
+		this.origin = origin;
+	}
+	
+	public String getorigin()
+	{
+		return origin;
+	}
+	
+/*	public String getItem()
+	{
+     	return (super.getItem()+","+bestBefore+","+origin);
+	}
+	*/
+	
+	
+	public void printprintItemInfo()
+	{
+		super.printItemInfo();
+		System.out.println(bestBefore);
+		
+	}
+
+}

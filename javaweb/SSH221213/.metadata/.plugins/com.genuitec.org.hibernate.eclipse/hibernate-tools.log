@@ -1,0 +1,4 @@
+2013-12-13 20:49:45,279 0      [       Worker-3] ERROR   org.hibernate.util.XMLHelper  - Error parsing XML: F:\SSH221213\sshdemo\src\applicationContext.xml(2) Document is invalid: no grammar found.
+2013-12-13 20:49:45,283 4      [       Worker-3] ERROR   org.hibernate.util.XMLHelper  - Error parsing XML: F:\SSH221213\sshdemo\src\applicationContext.xml(2) Document root element "beans", must match DOCTYPE root "null".
+2013-12-13 21:17:09,948 1644669 [      Worker-22] ERROR   org.hibernate.util.XMLHelper  - Error parsing XML: F:\SSH221213\sshDemo\src\applicationContext.xml(2) Document is invalid: no grammar found.
+2013-12-13 21:17:09,948 1644669 [      Worker-22] ERROR   org.hibernate.util.XMLHelper  - Error parsing XML: F:\SSH221213\sshDemo\src\applicationContext.xml(2) Document root element "beans", must match DOCTYPE root "null".

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+ 
+
+    <display-name>SSHWeb</display-name>
+ <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+
+
+  <servlet>
+  	<servlet-name>adminList</servlet-name>
+  	<servlet-class>com.demo.admin.AdminList</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>adminList</servlet-name>
+  	<url-pattern>/adminList</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  	<servlet-name>adminPage</servlet-name>
+  	<servlet-class>com.demo.admin.AdminPage</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>adminPage</servlet-name>
+  	<url-pattern>/adminPage</url-pattern>
+  </servlet-mapping>
+
+
+<servlet>
+  	<servlet-name>adminUpdate</servlet-name>
+  	<servlet-class>com.demo.admin.AdminUpdate</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>adminUpdate</servlet-name>
+  	<url-pattern>/adminUpdate</url-pattern>
+  </servlet-mapping>
+
+ 
+  <servlet>
+  	<servlet-name>adminAdd</servlet-name>
+  	<servlet-class>com.demo.admin.AdminAdd</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>adminAdd</servlet-name>
+  	<url-pattern>/adminAdd</url-pattern>
+  </servlet-mapping>
+
+
+ 
+  <servlet>
+  	<servlet-name>adminDelete</servlet-name>
+  	<servlet-class>com.demo.admin.AdminDelete</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>adminDelete</servlet-name>
+  	<url-pattern>/adminDelete</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+  	<servlet-name>servletDemo</servlet-name>
+  	<servlet-class>com.zxy.servlet.ServletDemo</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>servletDemo</servlet-name>
+  	<url-pattern>/servletDemo</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  	<servlet-name>servletList</servlet-name>
+  	<servlet-class>com.zxy.servlet.ServletList</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>servletList</servlet-name>
+  	<url-pattern>/servletList</url-pattern>
+  </servlet-mapping>
+   
+   
+<servlet>
+  	<servlet-name>servletCart</servlet-name>
+  	<servlet-class>com.zxy.servlet.ServletCart</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>servletCart</servlet-name>
+  	<url-pattern>/servletCart</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+  	<servlet-name>buyServlet</servlet-name>
+  	<servlet-class>com.zxy.servlet.BuyServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>buyServlet</servlet-name>
+  	<url-pattern>/buyServlet</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+  	<servlet-name>deleteServlet</servlet-name>
+  	<servlet-class>com.zxy.servlet.DeleteItemServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>deleteServlet</servlet-name>
+  	<url-pattern>/deleteServlet</url-pattern>
+  </servlet-mapping>
+  
+
+ 
+  <servlet>
+  	<servlet-name>clearServlet</servlet-name>
+  	<servlet-class>com.zxy.servlet.ClearCartServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>clearServlet</servlet-name>
+  	<url-pattern>/clearServlet</url-pattern>
+  </servlet-mapping>
+
+
+   <servlet>
+  	<servlet-name>changeServlet</servlet-name>
+  	<servlet-class>com.zxy.servlet.ChangeQuantityServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>changeServlet</servlet-name>
+  	<url-pattern>/changeServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  </web-app>

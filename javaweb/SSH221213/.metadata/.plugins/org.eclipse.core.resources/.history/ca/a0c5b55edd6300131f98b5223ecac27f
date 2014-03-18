@@ -1,0 +1,45 @@
+package com.demo.hibernate;
+
+import com.demo.ibatis.dao.ItemDAO;
+import com.demo.ibatis.util.SqlMapClientFactory;
+
+public  class CartServiceImpl implements CartService {
+	//ItemDAO itemDAO = new ItemDAO();
+	  Item it = new Item();
+	  public Item getItem(String  sid){
+	    	try{
+	    		ItemDAO itemDAO = new ItemDAO();
+	    		itemDAO.setSqlMapClient(SqlMapClientFactory.getSqlMapClient());
+	    		//根据编号取出对应的Item
+	    		int i = Integer.parseInt(sid);
+	    	    Item item = itemDAO.getItem(i);
+	    	    return item;
+	     }catch(Exception e){
+	    	 e.printStackTrace();
+	   	 return it;
+	     }
+	     
+	  }  
+	  
+	  public void deleteCartItem(String sid, Cart cart){
+		 int num = Integer.parseInt(sid);
+		  cart.deleteCartItem(num);
+		  
+	  }
+	  
+	  
+	  public void clearCart(Cart cart){
+		  cart.clearCartItem();
+	  }
+	  
+	  
+	  public void changeQuantity(String sid, String quantity, Cart cart){
+		  int num = Integer.parseInt(sid);
+		  int q = Integer.parseInt(quantity);
+		  cart.changeQuantity(num, q);
+	  }
+	  
+	  
+	  
+	     
+}

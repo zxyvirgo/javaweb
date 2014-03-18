@@ -1,0 +1,10 @@
+package com.demo.ibatis.service;
+
+import java.util.List;
+public interface CartService {
+ // public List<Item> getAllItem();
+  public Item getItem(String  sid);
+  public void deleteCartItem(String sid, Cart cart);
+  public void clearCart(Cart cart);
+  public void changeQuantity(String sid, String quantity, Cart cart);
+}

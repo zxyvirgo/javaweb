@@ -1,0 +1,51 @@
+package com.demo.hibernate;
+
+import java.util.List;
+
+
+public  class CartServiceImpl implements CartService {
+	//ItemDAO itemDAO = new ItemDAO();
+	  Item it = new Item();
+	  public Item getItem(String  sid){
+	    	try{
+	    		ItemDAO itemDAO = new ItemDAO();
+	    		Item item =null;
+	    		int id = Integer.parseInt(sid);
+	    	    itemDAO.findById(id);
+	    	    return item;
+	     }catch(Exception e){
+	    	 e.printStackTrace();
+	   	 return it;
+	     }
+	     
+	  }  
+	  
+	  @SuppressWarnings("unchecked")
+	public List<Item> getAll(){
+		  ItemDAO itemDAO = new ItemDAO();
+		  List<Item> list = itemDAO.findAll();
+		  return list;
+	  }
+	  
+	  public void deleteCartItem(String sid, Cart cart){
+		 int num = Integer.parseInt(sid);
+		  cart.deleteCartItem(num);
+		  
+	  }
+	  
+	  
+	  public void clearCart(Cart cart){
+		  cart.clearCartItem();
+	  }
+	  
+	  
+	  public void changeQuantity(String sid, String quantity, Cart cart){
+		  int num = Integer.parseInt(sid);
+		  int q = Integer.parseInt(quantity);
+		  cart.changeQuantity(num, q);
+	  }
+	  
+	  
+	  
+	     
+}

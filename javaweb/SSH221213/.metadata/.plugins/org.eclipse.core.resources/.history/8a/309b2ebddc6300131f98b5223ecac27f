@@ -1,0 +1,24 @@
+package com.demo.hibernate;
+
+/**
+ * Item entity. @author MyEclipse Persistence Tools
+ */
+public class Item extends AbstractItem implements java.io.Serializable {
+
+	// Constructors
+
+	/** default constructor */
+	public Item() {
+	}
+
+	/** minimal constructor */
+	public Item(Integer id, String name, Double price) {
+		super(id, name, price);
+	}
+
+	/** full constructor */
+	public Item(Integer id, String name, Double price, String description) {
+		super(id, name, price, description);
+	}
+
+}

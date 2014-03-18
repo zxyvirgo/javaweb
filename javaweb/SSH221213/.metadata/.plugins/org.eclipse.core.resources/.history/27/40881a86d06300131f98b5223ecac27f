@@ -1,0 +1,44 @@
+package com.demo.hibernate.service;
+
+import com.demo.hibernate.*;
+
+
+
+import org.springframework.beans.BeansException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
+
+import com.demo.Hibernate.Item;
+import com.demo.Hibernate.ItemDAO;
+
+public class test {
+
+	public static void main(String[] args){
+		//Session session = null;
+		try{
+			//String path = test.class.getResource("applicationContext.xml").getPath();
+			//System.out.println("path = " +path);
+			//session = HibernateSessionFactory.getSession();
+			ApplicationContext ctx = new FileSystemXmlApplicationContext("file:F:\\structs\\Test\\src\\applicationContext.xml");
+			ItemDAO itemDao = (ItemDAO)ctx.getBean("ItemDAO");
+			Item item = new Item();
+			item.setId(6);
+			item.setName("奶茶");
+			item.setPrice(4.00);
+			item.setDescription("香甜可口");
+			
+			//System.out.print(item.getId());			
+			itemDao.save(item);
+			//Item persistentInstance = item;
+			//itemDao.delete(item);
+			
+		}catch(BeansException e){
+			System.out.println(e.getMessage());
+		}
+		catch(Exception ee){
+			System.out.println(ee.getMessage());
+		}
+	}
+	
+}

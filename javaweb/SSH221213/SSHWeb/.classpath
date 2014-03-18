@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/ssh"/>
+	<classpathentry kind="lib" path="H:/备份/1214911/SSH221213/SSHWeb/servlet+mysql+ibatis/ibatis-2.3.4.726.jar"/>
+	<classpathentry kind="lib" path="H:/备份/1214911/SSH221213/SSHWeb/servlet+mysql+ibatis/mysql-connector-java-5.1.26-bin.jar"/>
+	<classpathentry kind="lib" path="H:/备份/1214911/SSH221213/SSHWeb/servlet+mysql+ibatis/servlet-api.jar"/>
+	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
+</classpath>

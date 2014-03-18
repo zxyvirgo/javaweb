@@ -1,0 +1,13 @@
+#Fri Dec 13 20:33:42 CST 2013
+tomcat6Server.SSHWeb.contextRoot=/SSHWeb
+tomcat6Server.SSHWeb.isDeployed=true
+tomcat6Server.SSHWeb.IEARProjectName=
+tomcat6Server.SSHWeb.type=WebDeployment
+tomcat6Server.SSHWeb.shouldBackup=false
+tomcat6Server.SSHWeb.isExploded=true
+tomcat6Server.SSHWeb.deployIsOverProject=false
+tomcat6Server.SSHWeb.isUptoDate=true
+tomcat6Server.SSHWeb.shouldOverwrite=false
+eclipse.preferences.version=1
+tomcat6Server.SSHWeb.deploymentPath=F\:\\Tomcat6.0\\webapps\\SSHWeb
+tomcat6Server.SSHWeb.altContextRoot=
